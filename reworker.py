@@ -179,6 +179,7 @@ class A:
             "rietz_neuendorf": 0,
             "tauche": 0,
             "odervorland": 0,
+            "sonstiges Brandenburg": 0,
             "NULLDATA": 0,
             "no_category": 0,
             "sonstiges Deutschland": 0
@@ -232,6 +233,8 @@ class A:
                         "Steinhöfel",
                     ]:
                         sheet["odervorland"] += 1
+                    elif row.federalState == "Brandenburg":
+                        sheet["sonstiges Brandenburg"] +=1
                     else:
                         sheet["sonstiges Deutschland"] += 1
                 # 4) Foreign → nur wenn Land nicht NULLDATA
